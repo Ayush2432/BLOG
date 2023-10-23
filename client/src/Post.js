@@ -14,7 +14,7 @@ export default function Post({
     <div className="post">
       <div className="image">
         <Link to={`/post/${_id}`}>
-          <img src={"https://mern-smvq.onrender.com/" + cover} alt=""></img>
+          <img src={"https:/localhost:4000/" + cover} alt=""></img>
         </Link>
       </div>
       <div className="content">
