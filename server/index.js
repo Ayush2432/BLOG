@@ -11,6 +11,7 @@ const jwt = require("jsonwebtoken");
 const multer = require("multer"); //a library which takes care of the uploaded parts
 const uploadMiddleware = multer({ dest: "uploads/" });
 const fs = require("fs"); //filesystem
+const port = process.env.PORT || 4000;
 
 const salt = bcrypt.genSaltSync(10);
 
@@ -157,6 +158,6 @@ app.get("/post/:id", async (req, res) => {
   res.json(postDoc);
 });
 
-app.listen(4000, () => {
-  console.log(`Server is running on http://localhost:4000`);
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
 });
